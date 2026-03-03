@@ -77,7 +77,8 @@ End
 2. Customer return rate
 3. Top selling categories
 4. Average order value
-Explore the full list of business questions you can ask: [Possible Business Questions to Ask](./documentation/Possible-Business-Questions-to-Ask.md)
+
+Explore the full list of business questions you can ask: [Possible Business Questions to Ask](./Documentation/Possible-Business-Questions-to-Ask.md)
 
 * 5️⃣ Secure IAM & Authentication
     - Implemented production-level access control:

@@ -43,7 +43,7 @@ csv_writer.py
    ↓
 CSV File 
 
-<img src="../snapshots/flow_diagram.png" height="300" width="400">
+<img src="./snapshots/flow_diagram.png" height="300" width="400">
 
 
 ### 🎯 Key Features Implemented

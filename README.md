@@ -1,7 +1,7 @@
 # 🚀 GenAI-Powered BigQuery Lakehouse Assistant
 
 An end-to-end GenAI-driven BigQuery Lakehouse project that integrates Google Cloud services, GenAI (gemini flash) , public datasets, external Parquet tables, and Python SDK automation to answer business questions and export results dynamically.
-- bridges Data Engineering + Analytics + GenAI in one integrated solution.
+- bridging Data Engineering + Analytics + GenAI in one integrated solution.
   
 ## 📌 Project Overview
 

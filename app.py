@@ -5,6 +5,8 @@ from lakehouse_assistant.llm import generate_sql_query
 from lakehouse_assistant.bigquery_client import execute_sql_query
 from lakehouse_assistant.prompt_template import build_sql_prompt
 from lakehouse_assistant.bigqurry_table_schema_gen import extract_table_schema
+import csv
+import os
 
 project = "genai-lakehouse-assistant"
 dataset = "thelook_dataset"
@@ -48,8 +50,7 @@ def main():
     sql_query = generate_sql_query(prompt)
     print(f"Generated SQL Query:\n {sql_query}")
     
-    # Execute the SQL query and get results
-    
+    # Execute the SQL query and get results    
     #results = execute_sql_query(sql_query)
     #print("Query Results:", results)
     ##for row in results:
@@ -60,10 +61,43 @@ def main():
         results = execute_sql_query(sql_query)
         if results:
             print("\nResults:")
-            for row in results:
-                print(row)
+            #generate a file name with current timestamp using the business question and save the results in csv format
+            prompt_for_filename = f"""
+                Using the business question: "{question}"
+
+                Generate a valid file name.
+
+                Requirements:
+                - Maximum 25 characters total.
+                - Replace spaces with underscores.
+                - Remove all special characters.
+                - Use lowercase letters and numbers only.
+                - Do NOT include the file extension.
+                - Do NOT include explanations.
+                - Do NOT include extra text.
+                - Return ONLY the file name.
+                """
+            file_name = generate_sql_query(prompt_for_filename)
+            
+            #file path to save the results in csv format
+            csv_file = f"data/{file_name}.csv"
+
+            # Ensure directory exists
+            #os.makedirs(os.path.dirname(csv_file), exist_ok=True)
+            #Open file in write mode with newline='' to avoid blank lines on Windows
+            with open(csv_file, mode="w", newline="", encoding="utf-8") as file:
+                writer = csv.writer(file)
+
+                headers = list(results[0].keys())
+                writer.writerow(headers)
+                # Write each row from results into the CSV
+                for row in results:
+                    writer.writerow(row.values())
+                    print(row)
+
         else:
             print("Query executed successfully but returned no results.")
+
     except Exception as e:
         print("Query Execution Error:", e)
 

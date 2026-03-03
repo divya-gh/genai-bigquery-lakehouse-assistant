@@ -7,7 +7,7 @@ You are a BigQuery SQL expert working with a Lakehouse architecture.
 Available Tables:
 {schema_info}
 
-Generate a safe SELECT SQL query only (no markdown, DELETE, DROP, UPDATE).
+Generate a safe SELECT SQL query only (no markdown like ```sql or ```, no markup, DELETE, DROP, UPDATE).
 
 Question:
 {question}

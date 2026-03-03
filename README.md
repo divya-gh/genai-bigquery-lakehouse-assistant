@@ -25,27 +25,26 @@ Simulating a real-world enterprise analytics workflow using Gemini flash llm.
 * Local Environment: Python Virtual Environment
 
 ### 🔄 End-to-End Workflow
-  Start
-  ↓
-Create External Table? (Yes)
-  ↓
-GenAI generates CREATE EXTERNAL TABLE SQL
-  ↓
-Table created in BigQuery
-  ↓
-User asks Business Question
-  ↓
-GenAI generates analytical SQL query
-  ↓
-Python executes SQL using BigQuery Client
-  ↓
-Results retrieved
-  ↓
-GenAI generates sanitized timestamped filename
-  ↓
-Results written to CSV file
-  ↓
-End
+  User 
+   ↓
+app.py 
+   ↓
+llm.py 
+   ↓
+bigquery_client.py 
+   ↓
+BigQuery 
+   ↓
+Results 
+   ↓
+filename_generator.py 
+   ↓
+csv_writer.py 
+   ↓
+CSV File 
+
+<img src="../snapshots/flow_diagram.png" height="300" width="400">
+
 
 ### 🎯 Key Features Implemented
 * 1️⃣ External Table Creation (Lakehouse Pattern)

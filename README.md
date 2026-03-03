@@ -129,3 +129,4 @@ Demonstrating real-world Cloud Security & Governance understanding.
 
 
 Citation - This project was independently designed and developed using the knowledge gained from the Google Cloud Data Analytics Certification program, with additional guidance and assistance from ChatGPT for prompt refinement, debugging support, and documentation.
+Licence - MIT

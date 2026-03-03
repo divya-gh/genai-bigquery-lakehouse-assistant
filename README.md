@@ -1,7 +1,8 @@
 # 🚀 GenAI-Powered BigQuery Lakehouse Assistant
 
 An end-to-end GenAI-driven BigQuery Lakehouse project that integrates Google Cloud services, GenAI (gemini flash) , public datasets, external Parquet tables, and Python SDK automation to answer business questions and export results dynamically.
-
+- bridges Data Engineering + Analytics + GenAI in one integrated solution.
+  
 ## 📌 Project Overview
 
 ### This project demonstrates how to:
@@ -15,13 +16,36 @@ An end-to-end GenAI-driven BigQuery Lakehouse project that integrates Google Clo
 Simulating a real-world enterprise analytics workflow using Gemini flash llm.
 
 ### 🏗 Architecture Components
+* GenAI Integration: Gemini-2.5-flash LLM; generated SQL & file naming
 * Cloud Platform: Google Cloud
 * Data Warehouse: BigQuery
 * Public Dataset: TheLook eCommerce
 * Storage Format: Parquet (External Tables)
 * SDK: Python BigQuery Client
-* GenAI Integration: LLM-generated SQL & file naming
 * Local Environment: Python Virtual Environment
+
+### 🔄 End-to-End Workflow
+  Start
+  ↓
+Create External Table? (Yes)
+  ↓
+GenAI generates CREATE EXTERNAL TABLE SQL
+  ↓
+Table created in BigQuery
+  ↓
+User asks Business Question
+  ↓
+GenAI generates analytical SQL query
+  ↓
+Python executes SQL using BigQuery Client
+  ↓
+Results retrieved
+  ↓
+GenAI generates sanitized timestamped filename
+  ↓
+Results written to CSV file
+  ↓
+End
 
 ### 🎯 Key Features Implemented
 * 1️⃣ External Table Creation (Lakehouse Pattern)
@@ -85,6 +109,8 @@ Demonstrating real-world Cloud Security & Governance understanding.
       - IAM Role Management
       - Service Account & Key Management
       - Lakehouse Architecture
+      - Git/Github & rollback handling
+      - Virtual environment management
 
 ### 🤖 AI Integration:
   - Prompt Engineering
@@ -102,6 +128,4 @@ Demonstrating real-world Cloud Security & Governance understanding.
 
 
 
-Git uncommit & rollback handling
-
-Virtual environment management
+Citation - This project was independently designed and developed using the knowledge gained from the Google Cloud Data Analytics Certification program, with additional guidance and assistance from ChatGPT for prompt refinement, debugging support, and documentation.

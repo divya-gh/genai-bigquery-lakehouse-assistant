@@ -25,6 +25,7 @@ Simulating a real-world enterprise analytics workflow using Gemini flash llm.
 * Local Environment: Python Virtual Environment
 
 ### 🔄 End-to-End Workflow
+```
   User 
    ↓
 app.py 
@@ -42,7 +43,7 @@ filename_generator.py
 csv_writer.py 
    ↓
 CSV File 
-
+```
 <img src="./snapshots/flow_diagram.png" height="300" width="400">
 
 

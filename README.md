@@ -109,6 +109,7 @@ Demonstrating real-world Cloud Security & Governance understanding.
 #### ☁ Cloud & Data Engineering:
 
 - Google Cloud Platform
+  
       - BigQuery
       - External Tables
       - Public Dataset Integration

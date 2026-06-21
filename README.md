@@ -105,7 +105,9 @@ Demonstrating real-world Cloud Security & Governance understanding.
     - Dynamic file naming using LLM and prompt engineering and Writing structured results to CSV
 
 ## 🛠 Skills Demonstrated
+
 #### ☁ Cloud & Data Engineering:
+
 - Google Cloud Platform
       - BigQuery
       - External Tables
